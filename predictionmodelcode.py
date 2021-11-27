@@ -23,12 +23,12 @@ final_dataset.drop(['Year'],axis=1,inplace=True)
 final_dataset = final_dataset.drop(['Current Year'],axis=1)
 
 # Checking the correleation between features
-corrmat = df.corr()
-top_corr_features = corrmat.index
-plt.figure(figsize=(10,10))
-# plot head map
-g = sns.heatmap(df[top_corr_features].corr(),annot=True,cmap="RdYlGn")
-plt.savefig("Feature_correlation.png")
+# corrmat = df.corr()
+# top_corr_features = corrmat.index
+# plt.figure(figsize=(10,10))
+# # plot head map
+# g = sns.heatmap(df[top_corr_features].corr(),annot=True,cmap="RdYlGn")
+# plt.savefig("Feature_correlation.png")
 
 # Encoding categorical data
 final_dataset =  pd.get_dummies(final_dataset,drop_first=True)
@@ -38,8 +38,14 @@ X=final_dataset.iloc[:,1:]
 y=final_dataset.iloc[:,0]
 
 # Checking the important features
+model = ExtraTreesRegressor()
+model.fit(X,y)
 
-print(X.head())
+# plot graph of geature importances for better visualization
+feat_importances = pd.Series(model.feature_importances_,index=X.columns)
+feat_importances.nlargest(5).plot(kind='barh')
+
+plt.savefig("ImportantFeatures.png")
 
 
 
