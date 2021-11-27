@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+from sklearn.ensemble import ExtraTreesRegressor
+
+
 # loading the data set
 
 df = pd.read_csv('Car data.csv')
@@ -26,4 +29,17 @@ plt.figure(figsize=(10,10))
 # plot head map
 g = sns.heatmap(df[top_corr_features].corr(),annot=True,cmap="RdYlGn")
 plt.savefig("Feature_correlation.png")
+
+# Encoding categorical data
+final_dataset =  pd.get_dummies(final_dataset,drop_first=True)
+
+# separate the dependent & independent feature
+X=final_dataset.iloc[:,1:]
+y=final_dataset.iloc[:,0]
+
+# Checking the important features
+
+print(X.head())
+
+
 
