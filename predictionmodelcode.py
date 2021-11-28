@@ -9,7 +9,7 @@ from sklearn.model_selection import RandomizedSearchCV
 
 import pickle
 
-
+import os
 
 # loading the data set
 from sklearn.model_selection import train_test_split
@@ -85,7 +85,24 @@ random_var.fit(X_train,y_train)
 
 pickle_file = open('rf_model.pkl','wb');
 pickle.dump(random_var,pickle_file)
+# Displaying the final dataset with full features
+# pd.set_option('max_columns', None)
+# print(final_dataset)
+# print(final_dataset.columns.tolist())
 
+
+
+
+# Loading the model from pickle test
+filename = 'rf_model.pkl'
+score={}
+if os.path.getsize(filename) > 0:
+    with open(filename, "rb") as f:
+        unpickler = pickle.Unpickler(f)
+        score =  unpickler.load()
+prediction = score.predict([[5, 2700, 0, 7, 0, 1, 0, 1]])
+rr=round(prediction[0], 2)
+print(rr)
 
 
 
