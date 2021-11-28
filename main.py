@@ -56,8 +56,8 @@ def predict():
         input_query = np.array([[Present_Price, Kms_Driven, Owner, Year, Fuel_Type_Diesel, Fuel_Type_Petrol,
                                  Seller_Type_Individual, Transmission_Mannual]])
         result = model.predict(input_query)[0]
-
-    return jsonify({'Price': str(result)})
+        output=round(result, 2)
+    return jsonify({'Price': str(output)})
 
 
 
