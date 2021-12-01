@@ -12,16 +12,16 @@ import pickle
 model = pickle.load(open('rf_model.pkl', 'rb'))
 app = Flask(__name__)
 
+
 #
 # @app.route('/')
 # def index():
 #     return "Hello World"
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     Fuel_Type_Diesel = 0
-
     if request.method == 'POST':
         Year = int(request.form.get('Year'))
         Present_Price = float(request.form.get('Present_Price'))
@@ -56,9 +56,8 @@ def predict():
         input_query = np.array([[Present_Price, Kms_Driven, Owner, Year, Fuel_Type_Diesel, Fuel_Type_Petrol,
                                  Seller_Type_Individual, Transmission_Mannual]])
         result = model.predict(input_query)[0]
-        output=round(result, 2)
+        output = round(result, 2)
     return jsonify({'Price': str(output)})
-
 
 
 # Press the green button in the gutter to run the script.
