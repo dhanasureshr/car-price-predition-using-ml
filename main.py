@@ -18,7 +18,7 @@ app = Flask(__name__)
 #     return "Hello World"
 
 
-@app.route('/', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     Fuel_Type_Diesel = 0
 
