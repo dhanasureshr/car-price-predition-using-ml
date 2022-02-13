@@ -14,9 +14,9 @@ model = pickle.load(open('rf_model.pkl', 'rb'))
 app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return "Hello World"
+#@app.route('/')
+#def index():
+#    return "Hello World"
 
 
 standard_to = StandardScaler()
