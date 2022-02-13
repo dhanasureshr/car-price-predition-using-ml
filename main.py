@@ -4,10 +4,11 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 # Building Flask API
-
+import app as app
 from flask import Flask, request, jsonify
 import numpy as np
 import pickle
+from sklearn.preprocessing import StandardScaler
 
 model = pickle.load(open('rf_model.pkl', 'rb'))
 app = Flask(__name__)
@@ -18,7 +19,10 @@ def index():
     return "Hello World"
 
 
-@app.route('/predict', methods=['POST'])
+standard_to = StandardScaler()
+
+
+@app.route('/', methods=['POST'])
 def predict():
     Fuel_Type_Diesel = 0
     if request.method == 'POST':
