@@ -13,13 +13,13 @@ model = pickle.load(open('rf_model.pkl', 'rb'))
 app = Flask(__name__)
 
 
-#
+
 # @app.route('/')
 # def index():
 #     return "Hello World"
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     Fuel_Type_Diesel = 0
     if request.method == 'POST':
