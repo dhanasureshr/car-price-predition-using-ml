@@ -22,7 +22,7 @@ app = Flask(__name__)
 standard_to = StandardScaler()
 
 
-@app.route('/', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     Fuel_Type_Diesel = 0
     if request.method == 'POST':
