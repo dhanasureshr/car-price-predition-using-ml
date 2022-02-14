@@ -4,7 +4,7 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 # Building Flask API
-import app as app
+
 from flask import Flask, request, jsonify
 import numpy as np
 import pickle
