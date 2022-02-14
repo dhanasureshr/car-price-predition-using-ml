@@ -5,7 +5,7 @@
 
 # Building Flask API
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import numpy as np
 import pickle as p
 from sklearn.preprocessing import StandardScaler
@@ -16,7 +16,7 @@ model = p.load(open('rf_model.pkl', 'rb'))
 
 @app.route('/', methods=['GET'])
 def index():
-    return "Hello World"
+    return "Hello world"
 
 
 standard_to = StandardScaler()
@@ -67,4 +67,4 @@ def predict():
 if __name__ == '__main__':
     app.run(debug=True)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
