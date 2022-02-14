@@ -96,16 +96,16 @@ pickle.dump(random_var,pickle_file)
 
 
 # Loading the model from pickle test
-filename = 'rf_model.pkl'
-score={}
-if os.path.getsize(filename) > 0:
-    with open(filename, "rb") as f:
-        unpickler = pickle.Unpickler(f)
-        score = unpickler.load()
-prediction = score.predict([[5, 2700, 0, 7, 0, 1, 0, 1]])
-rr=round(prediction[0], 2)
+#filename = 'rf_model.pkl'
+#score = {}
+#if os.path.getsize(filename) > 0:
+   # with open(filename, "rb") as f:
+  #      unpickler = pickle.Unpickler(f)
+ #       score = unpickler.load()
+#prediction = score.predict([[5, 2700, 0, 7, 0, 1, 0, 1]])
+#rr = round(prediction[0], 2)
 
-print(rr)
+#print(rr)
 
 
 
