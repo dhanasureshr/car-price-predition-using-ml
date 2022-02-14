@@ -29,10 +29,10 @@ model = ExtraTreesRegressor()
 model.fit(X, y)
 # Split the data into train & test set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
-regressor = RandomForestRegressor()
+re = RandomForestRegressor()
 n_estimators = [int(x) for x in np.linspace(start=100, stop=1200, num=12)]
 # Number of features to consider at every split
-max_features = ['auto', 'sqet']
+max_features = ['auto', 'sqrt']
 # Maximum number of levels in tree
 max_depth = [int(x) for x in np.linspace(5, 30, num=6)]
 # minimum number of samples required to split a node
@@ -45,7 +45,7 @@ random_grid = {'n_estimators': n_estimators,
                'min_samples_split': min_samples_split,
                'min_samples_leaf': min_samples_leaf}
 
-random_var = RandomizedSearchCV(estimator=regressor, param_distributions=random_grid, scoring='neg_mean_squared_error',
+random_var = RandomizedSearchCV(estimator=re, param_distributions=random_grid, scoring='neg_mean_squared_error',
                                 n_iter=10, cv=5, verbose=2, random_state=42, n_jobs=1)
 
 random_var.fit(X_train, y_train)
