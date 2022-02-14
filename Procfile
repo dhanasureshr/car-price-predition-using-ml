@@ -1,1 +1,1 @@
-web: gunicorn car-price-prediction-using-ml.wsgi:app.py
+web: gunicorn car-price-prediction-using-ml:app
