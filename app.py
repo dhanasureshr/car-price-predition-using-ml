@@ -10,11 +10,11 @@ import numpy as np
 import pickle
 from sklearn.preprocessing import StandardScaler
 
-model = pickle.load(open('rf_model.pkl', 'rb'))
 app = Flask(__name__)
+model = pickle.load(open('rf_model.pkl', 'rb'))
 
 
-@app.route('/',methods=['GET'])
+@app.route('/', methods=['GET'])
 def index():
     return "Hello World"
 
