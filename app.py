@@ -10,7 +10,7 @@ import numpy as np
 import pickle
 from sklearn.preprocessing import StandardScaler
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Template')
 model = pickle.load(open('rf_model.pkl', 'rb'))
 
 
