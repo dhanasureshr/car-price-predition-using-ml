@@ -7,11 +7,11 @@
 
 from flask import Flask, request, jsonify
 import numpy as np
-import pickle
+import pickle as p
 from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__, template_folder='Template')
-model = pickle.load(open('rf_model.pkl', 'rb'))
+model = p.load(open('rf_model.pkl', 'rb'))
 
 
 @app.route('/', methods=['GET'])
