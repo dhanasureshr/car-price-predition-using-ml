@@ -17,5 +17,4 @@ pickleshare==0.7.5
 threadpoolctl==2.1.0
 requests==2.25.1
 scikit-learn==1.0.1
-
 gunicorn

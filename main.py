@@ -14,7 +14,7 @@ model = pickle.load(open('rf_model.pkl', 'rb'))
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def index():
     return "Hello World"
 
