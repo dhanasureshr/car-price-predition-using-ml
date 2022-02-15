@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify, render_template
 import numpy as np
 import pickle
 
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open("model.pkl", "rb"))
 app = Flask(__name__)
 
 
