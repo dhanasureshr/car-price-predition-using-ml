@@ -8,7 +8,6 @@
 from flask import Flask, request, jsonify, render_template
 import numpy as np
 import pickle as p
-from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__, template_folder='Template')
 model = p.load(open('rf_model.pkl', 'rb'))
@@ -18,8 +17,6 @@ model = p.load(open('rf_model.pkl', 'rb'))
 def index():
     return "Hello world"
 
-
-standard_to = StandardScaler()
 
 
 @app.route('/predict', methods=['POST'])
