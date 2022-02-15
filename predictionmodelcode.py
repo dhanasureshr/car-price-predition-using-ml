@@ -5,7 +5,8 @@ import numpy as np
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import RandomizedSearchCV
-import pickle
+
+import joblib
 
 # loading the data set
 from sklearn.model_selection import train_test_split
@@ -50,7 +51,9 @@ random_var = RandomizedSearchCV(estimator=re, param_distributions=random_grid, s
 
 random_var.fit(X_train, y_train)
 
-f = 'model.pkl'
-with open(f, 'wb') as file:
-    pickle.dump(random_var, file)
+#f = 'model.pkl'
+#with open(f, 'wb') as file:
+   # joblib.dump(random_var, file)
+
+joblib.dump(random_var, 'model.plk')
 
