@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify, render_template
 import numpy as np
 import joblib
 
-nb_model = open('model.plk', 'rb')
+nb_model = open('model.sav')
 model = joblib.load(nb_model)
 app = Flask(__name__)
 

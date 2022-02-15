@@ -55,5 +55,5 @@ random_var.fit(X_train, y_train)
 #with open(f, 'wb') as file:
    # joblib.dump(random_var, file)
 
-joblib.dump(random_var, 'model.plk')
+joblib.dump(random_var, 'model.sav')
 
