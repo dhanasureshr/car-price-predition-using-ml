@@ -7,10 +7,10 @@
 
 from flask import Flask, request, jsonify, render_template
 import numpy as np
-import joblib
+import pickle
 
-nb_model = open('model.sav')
-model = joblib.load(nb_model)
+model = pickle.load(open('model.pkl', 'rb'))
+
 app = Flask(__name__)
 
 
