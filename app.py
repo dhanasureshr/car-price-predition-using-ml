@@ -7,16 +7,16 @@
 
 from flask import Flask, request, jsonify, render_template
 import numpy as np
-import pickle as p
 
-app = Flask(__name__, template_folder='Template')
-model = p.load(open('rf_model.pkl', 'rb'))
+import joblib
+
+model = joblib.load('model.pkl')
+app = Flask(__name__)
 
 
 @app.route('/', methods=['GET'])
 def index():
     return "Hello world"
-
 
 
 @app.route('/predict', methods=['POST'])
@@ -63,5 +63,3 @@ def predict():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     app.run(debug=True)
-
-

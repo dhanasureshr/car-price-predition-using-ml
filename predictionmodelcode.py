@@ -49,6 +49,8 @@ random_var = RandomizedSearchCV(estimator=re, param_distributions=random_grid, s
                                 n_iter=10, cv=5, verbose=2, random_state=42, n_jobs=1)
 
 random_var.fit(X_train, y_train)
-pickle_file = open('rf_model.pkl', 'wb')
-pickle.dump(random_var, pickle_file)
+
+f = 'model.pkl'
+with open(f, 'wb') as file:
+    pickle.dump(random_var, file)
 
