@@ -21,7 +21,7 @@ joblib_file = "joblib_model.pkl"
 
 @app.route('/', methods=['GET'])
 def index():
-    return "Hello world"
+    return "Car price predictor API preview --dhanasureshr git profile backend connect test"
 
 
 """
