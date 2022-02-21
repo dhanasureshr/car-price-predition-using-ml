@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Car Price Predictor</string>
+    
+    <string-array name="Fueltype">
+        <item>Diesel</item>
+        <item>Petrol</item>
+    </string-array>
+    
+    <string-array name="Sellertype">
+        <item>Individual</item>
+        <item>Dealer</item>
+    </string-array>
+
+    <string-array name="Transmissiontype">
+        <item>Mannual</item>
+        <item>Automatic</item>
+    </string-array>
+</resources>
