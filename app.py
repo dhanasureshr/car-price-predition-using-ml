@@ -5,11 +5,9 @@
 
 # Building Flask API
 import joblib
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 import numpy as np
-import pickle
 
-import json
 
 # model = pickle.load(open('model.pkl', 'rb'))
 
@@ -27,7 +25,7 @@ def index():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    Fuel_Type_Diesel = 0
+
     if request.method == 'POST':
         Year = int(request.form.get('Year'))
         Present_Price = float(request.form.get('Present_Price'))
