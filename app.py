@@ -4,16 +4,20 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 # Building Flask API
-
+import joblib
 from flask import Flask, request, jsonify, render_template
 import numpy as np
 import pickle
+
+import json
 
 # model = pickle.load(open('model.pkl', 'rb'))
 
 app = Flask(__name__)
 
-model = pickle.load(open('model.pkl', 'rb'))
+joblib_file = "joblib_model.pkl"
+model = joblib.load(joblib_file)
+# model = pickle.load(open('model.pkl', 'rb'))
 
 
 @app.route('/', methods=['GET'])

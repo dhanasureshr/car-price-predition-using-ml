@@ -5,14 +5,16 @@ import numpy as np
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import RandomizedSearchCV
-
+import json
 import pickle
-
+import joblib
 # loading the data set
 from sklearn.model_selection import train_test_split
+
 df = pd.read_csv('Car data.csv')
 # removing car name
-final_dataset = df[['Year', 'Selling_Price', 'Present_Price', 'Kms_Driven', 'Fuel_Type', 'Seller_Type', 'Transmission', 'Owner']]
+final_dataset = df[
+    ['Year', 'Selling_Price', 'Present_Price', 'Kms_Driven', 'Fuel_Type', 'Seller_Type', 'Transmission', 'Owner']]
 # adding current year columns
 final_dataset['Current Year'] = 2021
 # Calculate the number of years (no_Years), how many years ago owner bought a car
@@ -51,10 +53,8 @@ random_var = RandomizedSearchCV(estimator=re, param_distributions=random_grid, s
 
 random_var.fit(X_train, y_train)
 
-
-
-f = 'N_model.pkl'
-pickle.dump(model, open(f, 'wb'))
-
-
+# f = 'N_model.pkl'
+# pickle.dump(model, open(f, 'wb'))
+joblib_file = "joblib_model.pkl"
+joblib.dump(random_var, joblib_file)
 
