@@ -17,7 +17,7 @@ model = pickle.load(open('rf_model.pkl', 'rb'))
 
 @app.route('/', methods=['GET'])
 def index():
-    return "Car price predictor API preview --dhanasureshr git profile backend connect test"
+    return "Car price predictor API preview --dhanasureshr git profile backend api successfully deployed "
 
 
 @app.route('/predict', methods=['POST'])
