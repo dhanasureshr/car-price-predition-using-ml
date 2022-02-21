@@ -4,18 +4,15 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 # Building Flask API
-import joblib
+import pickle
 from flask import Flask, request, jsonify
 import numpy as np
 
-# model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 app = Flask(__name__)
 
-joblib_file = "joblib_model.pkl"
 
-
-# model = joblib.load(joblib_file)
 # model = pickle.load(open('model.pkl', 'rb'))
 
 
@@ -24,10 +21,8 @@ def index():
     return "Car price predictor API preview --dhanasureshr git profile backend connect test"
 
 
-"""
 @app.route('/predict', methods=['POST'])
 def predict():
-
     if request.method == 'POST':
         Year = int(request.form.get('Year'))
         Present_Price = float(request.form.get('Present_Price'))
@@ -65,7 +60,7 @@ def predict():
         output = round(result, 2)
     return jsonify({'Price': str(output)})
 
-"""
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     app.run(debug=True)

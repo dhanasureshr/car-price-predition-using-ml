@@ -33,3 +33,4 @@ sklearn==0.0
 scikit-learn==1.0.1
 joblib==1.0.1
 gunicorn
+git-lfs==1.6
