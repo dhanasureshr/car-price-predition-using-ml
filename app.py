@@ -8,13 +8,14 @@ import joblib
 from flask import Flask, request, jsonify
 import numpy as np
 
-
 # model = pickle.load(open('model.pkl', 'rb'))
 
 app = Flask(__name__)
 
 joblib_file = "joblib_model.pkl"
-model = joblib.load(joblib_file)
+
+
+# model = joblib.load(joblib_file)
 # model = pickle.load(open('model.pkl', 'rb'))
 
 
@@ -23,6 +24,7 @@ def index():
     return "Hello world"
 
 
+"""
 @app.route('/predict', methods=['POST'])
 def predict():
 
@@ -63,7 +65,7 @@ def predict():
         output = round(result, 2)
     return jsonify({'Price': str(output)})
 
-
+"""
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     app.run(debug=True)
