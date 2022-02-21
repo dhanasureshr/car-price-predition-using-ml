@@ -51,8 +51,8 @@ random_var = RandomizedSearchCV(estimator=re, param_distributions=random_grid, s
 
 random_var.fit(X_train, y_train)
 
-f = 'model.pkl'
-pickle.dump(random_var, open(f, 'wb'))
+f = 'N_model.pkl'
+pickle.dump(model, open(f, 'wb'))
 
 
 
