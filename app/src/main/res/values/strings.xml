@@ -12,7 +12,7 @@
     </string-array>
 
     <string-array name="Transmissiontype">
-        <item>Mannual</item>
         <item>Automatic</item>
+        <item>Mannual</item>
     </string-array>
 </resources>
