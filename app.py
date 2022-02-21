@@ -13,8 +13,7 @@ import pickle
 
 app = Flask(__name__)
 
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
+model = pickle.load(open('model.pkl', 'rb'))
 
 
 @app.route('/', methods=['GET'])
