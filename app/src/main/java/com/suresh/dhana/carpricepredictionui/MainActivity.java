@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.TextUtils;
 import android.view.ContextMenu;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -97,7 +98,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 				//=====================================================================
 				//===========conditions for edit text is empty or not =================
-				if(TextUtils)
+				if(TextUtils.isEmpty(Year.getText().toString()))
+				{
+					Toast.makeText(MainActivity.this, "Year field is empty", Toast.LENGTH_SHORT).show();
+					return;
+				}
+
+				if(TextUtils.isEmpty(Present_Price.getText().toString()))
+				{
+					Toast.makeText(MainActivity.this,"Price field is empty",Toast.LENGTH_SHORT).show();
+					return;
+				}
+
+				if(TextUtils.isEmpty(Kms_Driven.getText().toString()))
+				{
+					Toast.makeText(MainActivity.this, "Km field is empty",Toast.LENGTH_SHORT).show();
+					return;
+				}
+
+				if(TextUtils.isEmpty(Owner.getText().toString()))
+				{
+					Toast.makeText(MainActivity.this,"Owners field is empty",Toast.LENGTH_SHORT).show();
+					return;
+				}
 				//=====================================================================
 
 				// predict price button logic here
@@ -119,7 +142,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 					 new Response.ErrorListener() {
 						 @Override
 						 public void onErrorResponse(VolleyError error) {
-							 Toast.makeText(MainActivity.this,error.getMessage(), Toast.LENGTH_SHORT).show();
+							 Toast toast = Toast.makeText(MainActivity.this,"Please check your Internet access", Toast.LENGTH_SHORT);
+							 toast.setGravity(Gravity.CENTER_VERTICAL,0, 0);
+							 toast.show();
 						 }
 					 }){
 			 	@Override
