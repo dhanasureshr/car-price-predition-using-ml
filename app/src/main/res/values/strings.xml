@@ -15,4 +15,18 @@
         <item>Automatic</item>
         <item>Mannual</item>
     </string-array>
+
+    <string name="Transmission">Transmission</string>
+    <string name="Seller_type">Seller Type</string>
+    <string name="Fuel_type">Fuel Type</string>
+    <string name="Owner_Edittext">ex: 0 or 2 or 3</string>
+    <string name="Owner">Owners previously had the car</string>
+    <string name="Km_Edittext">Km</string>
+    <string name="Kilometers">Kilometers Drived</string>
+    <string name="Price_Edittext">price in lakhs</string>
+    <string name="Showroom">Showroom Price</string>
+    <string name="year_Edittext">Year</string>
+    <string name="Year_owner">Year owner bought the car</string>
+    <string name="Predict">Predict Price</string>
 </resources>
+

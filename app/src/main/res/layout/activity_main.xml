@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Year Owner bought the car"
+        android:text="@string/Year_owner"
         android:textSize="20sp"
         android:textAlignment="center"
         android:layout_marginTop="9dp">
@@ -17,7 +17,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="year"
+        android:hint="@string/year_Edittext"
         android:textAlignment="center"
         android:inputType="number"
         android:id="@+id/year"
@@ -26,7 +26,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Showroom Price"
+        android:text="@string/Showroom"
         android:textSize="20sp"
         android:textAlignment="center"
         android:layout_marginTop="9dp">
@@ -35,7 +35,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Price in lakhs"
+        android:hint="@string/Price_Edittext"
         android:textAlignment="center"
         android:inputType="numberDecimal"
         android:id="@+id/price"
@@ -44,7 +44,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kilometers Drived"
+        android:text="@string/Kilometers"
         android:textSize="20sp"
         android:textAlignment="center"
         android:layout_marginTop="9dp"
@@ -54,7 +54,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="km"
+        android:hint="@string/Km_Edittext"
         android:textAlignment="center"
         android:inputType="number"
         android:id="@+id/km"
@@ -63,7 +63,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Owners previously had the car"
+        android:text="@string/Owner"
         android:textSize="20sp"
         android:textAlignment="center"
         android:layout_marginTop="9dp"
@@ -71,7 +71,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ex: 0 or 2 or 3"
+        android:hint="@string/Owner_Edittext"
         android:textAlignment="center"
         android:id="@+id/owner"
         android:inputType="number"
@@ -91,7 +91,7 @@
         <TextView
             android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:text="Fuel Type"
+            android:text="@string/Fuel_type"
             android:textSize="20sp"
             android:id="@+id/fuelview"
             />
@@ -107,7 +107,7 @@
         <TextView
             android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:text="Seller type"
+            android:text="@string/Seller_type"
             android:textSize="20sp"
             android:layout_below="@+id/fuelview"
             android:layout_marginTop="20dp"
@@ -126,7 +126,7 @@
         <TextView
             android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:text="Transmission"
+            android:text="@string/Transmission"
             android:textSize="20sp"
             android:layout_below="@+id/sellerview"
             android:layout_marginTop="20dp"
@@ -149,7 +149,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:id="@+id/predict"
-            android:text="Predict price"
+            android:text="@string/Predict"
             />
 
         <TextView
