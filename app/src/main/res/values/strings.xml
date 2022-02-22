@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Car Price Predictor</string>
+    <string name="app_name">Car Price</string>
     
     <string-array name="Fueltype">
         <item>Diesel</item>
