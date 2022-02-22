@@ -2,6 +2,7 @@ package com.suresh.dhana.carpricepredictionui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.TextUtils;
 import android.view.ContextMenu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,20 +10,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.*;
-
-
+import android.text.TextUtils;
 import android.os.Bundle;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -97,6 +94,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 		predictprice.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
+
+				//=====================================================================
+				//===========conditions for edit text is empty or not =================
+				if(TextUtils)
+				//=====================================================================
+
 				// predict price button logic here
              StringRequest stringRequest = new StringRequest(
 					 Request.Method.POST,
