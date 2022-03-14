@@ -1,24 +1,12 @@
 <resources>
     <string name="app_name">Car Price</string>
-    
-    <string-array name="Fueltype">
-        <item>Diesel</item>
-        <item>Petrol</item>
-    </string-array>
-    
-    <string-array name="Sellertype">
-        <item>Individual</item>
-        <item>Dealer</item>
-    </string-array>
-
-    <string-array name="Transmissiontype">
-        <item>Automatic</item>
-        <item>Mannual</item>
-    </string-array>
 
     <string name="Transmission">Transmission</string>
+
     <string name="Seller_type">Seller Type</string>
+
     <string name="Fuel_type">Fuel Type</string>
+
     <string name="Owner_Edittext">ex: 0 or 2 or 3</string>
     <string name="Owner">Owners previously had the car</string>
     <string name="Km_Edittext">Km</string>
@@ -28,5 +16,20 @@
     <string name="year_Edittext">Year</string>
     <string name="Year_owner">Year owner bought the car</string>
     <string name="Predict">Predict Price</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string-array name="Fueltype">
+        <item>Diesel</item>
+        <item>Petrol</item>
+    </string-array>
+    <string-array name="Sellertype">
+        <item>Individual</item>
+        <item>Dealer</item>
+    </string-array>
+    <string-array name="Transmissiontype">
+        <item>Automatic</item>
+        <item>Mannual</item>
+    </string-array>
 </resources>
 
